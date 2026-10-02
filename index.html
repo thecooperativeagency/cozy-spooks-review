@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Spooky &amp; Cozy — review</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg:#fff; --ink:#111; --muted:#5d5953; --line:rgba(17,17,17,.12);
+      --pad:clamp(1rem,4vw,1.75rem);
+    }
+    * { box-sizing:border-box; margin:0; padding:0; }
+    body {
+      font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
+      background:var(--bg); color:var(--ink);
+      -webkit-font-smoothing:antialiased; line-height:1.45;
+    }
+    a { color:inherit; text-decoration:none; }
+    .shell { width:min(100% - (var(--pad)*2), 920px); margin:0 auto; padding:1.5rem 0 3.5rem; }
+    header {
+      display:flex; justify-content:space-between; align-items:flex-end;
+      gap:1rem; padding-bottom:1.1rem; border-bottom:1px solid var(--line);
+      margin-bottom:1.5rem;
+    }
+    .brand { font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:var(--muted); }
+    .meta { font-size:11px; letter-spacing:.12em; text-transform:uppercase; text-align:right; color:var(--muted); }
+    h1 {
+      font-family:"Instrument Serif", Georgia, serif; font-weight:400;
+      font-size:clamp(2.2rem,8vw,3.6rem); letter-spacing:-.03em; line-height:.95;
+      margin:.85rem 0 .6rem;
+    }
+    .lead { color:var(--muted); max-width:36rem; font-size:1.02rem; }
+    .cover { margin:1.5rem 0 1.75rem; border:1px solid var(--line); background:#f6f3ee; }
+    .cover img { display:block; width:100%; height:auto; }
+    .cover .cap {
+      padding:.7rem .9rem; font-size:11px; letter-spacing:.1em;
+      text-transform:uppercase; color:var(--muted);
+    }
+    .grid { display:grid; grid-template-columns:repeat(3,1fr); gap:.55rem; }
+    @media (min-width:720px) { .grid { grid-template-columns:repeat(5,1fr); } }
+    .card { display:flex; flex-direction:column; border:1px solid var(--line); background:#fff; }
+    .card img { width:100%; height:auto; display:block; background:#f6f3ee; }
+    .card span {
+      font-size:10px; letter-spacing:.12em; text-transform:uppercase;
+      padding:.4rem .45rem; color:var(--muted);
+    }
+    .note { margin-top:1.75rem; color:var(--muted); font-size:.82rem; max-width:32rem; }
+    .viewer {
+      display:none; position:fixed; inset:0; background:rgba(10,10,10,.94);
+      z-index:20; color:#fff; flex-direction:column;
+    }
+    .viewer.on { display:flex; }
+    .vbar {
+      display:flex; align-items:center; justify-content:space-between;
+      padding:.85rem 1rem; font-size:12px; letter-spacing:.08em; text-transform:uppercase;
+    }
+    .vbar button {
+      background:transparent; color:#fff; border:1px solid rgba(255,255,255,.35);
+      min-height:40px; padding:0 .9rem; letter-spacing:.1em; text-transform:uppercase; font-size:11px;
+    }
+    .vstage { flex:1; display:flex; align-items:center; justify-content:center; padding:0 .5rem 1rem; min-height:0; }
+    .vstage img { max-width:100%; max-height:100%; object-fit:contain; background:#fff; }
+    .vnav { display:flex; gap:.5rem; padding:0 1rem 1.1rem; }
+    .vnav button {
+      flex:1; min-height:48px; background:#fff; color:#111; border:0;
+      letter-spacing:.12em; text-transform:uppercase; font-size:12px;
+    }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <header>
+      <div class="brand">Fauntgass Fasho<br />review</div>
+      <div class="meta">JUMBO · 60 pages<br />KDP interior</div>
+    </header>
+    <!-- verify: cozy-spooks-review-v1-print60 -->
+    <h1>Spooky &amp; Cozy.</h1>
+    <p class="lead">Tap a page. Swipe or use next. This is the print line art, not the wrap PDF.</p>
+    <figure class="cover">
+      <a href="#cover" id="cover-link"><img src="assets/cover-th.png" alt="Spooky &amp; Cozy cover" /></a>
+      <figcaption class="cap">Cover review comp · not the 8.5×11 wrap</figcaption>
+    </figure>
+    <div class="grid" id="grid">
+<a class="card" href="#01" data-n="1"><img src="assets/01-ghost-sofa-th.png" alt="Page 01 ghost sofa" loading="lazy" /><span>01</span></a><a class="card" href="#02" data-n="2"><img src="assets/02-ghost-bath-th.png" alt="Page 02 ghost bath" loading="lazy" /><span>02</span></a><a class="card" href="#03" data-n="3"><img src="assets/03-ghost-fridge-th.png" alt="Page 03 ghost fridge" loading="lazy" /><span>03</span></a><a class="card" href="#04" data-n="4"><img src="assets/04-pumpkin-carve-th.png" alt="Page 04 pumpkin carve" loading="lazy" /><span>04</span></a><a class="card" href="#05" data-n="5"><img src="assets/05-pumpkin-wagon-th.png" alt="Page 05 pumpkin wagon" loading="lazy" /><span>05</span></a><a class="card" href="#06" data-n="6"><img src="assets/06-pumpkin-fort-th.png" alt="Page 06 pumpkin fort" loading="lazy" /><span>06</span></a><a class="card" href="#07" data-n="7"><img src="assets/07-bat-laundry-th.png" alt="Page 07 bat laundry" loading="lazy" /><span>07</span></a><a class="card" href="#08" data-n="8"><img src="assets/08-bat-chimes-th.png" alt="Page 08 bat chimes" loading="lazy" /><span>08</span></a><a class="card" href="#09" data-n="9"><img src="assets/09-bat-movie-th.png" alt="Page 09 bat movie" loading="lazy" /><span>09</span></a><a class="card" href="#10" data-n="10"><img src="assets/10-witch-kitchen-th.png" alt="Page 10 witch kitchen" loading="lazy" /><span>10</span></a><a class="card" href="#11" data-n="11"><img src="assets/11-witch-coffee-th.png" alt="Page 11 witch coffee" loading="lazy" /><span>11</span></a><a class="card" href="#12" data-n="12"><img src="assets/12-witch-greenhouse-th.png" alt="Page 12 witch greenhouse" loading="lazy" /><span>12</span></a><a class="card" href="#13" data-n="13"><img src="assets/13-cat-yarn-th.png" alt="Page 13 cat yarn" loading="lazy" /><span>13</span></a><a class="card" href="#14" data-n="14"><img src="assets/14-cat-hat-boat-th.png" alt="Page 14 cat hat boat" loading="lazy" /><span>14</span></a><a class="card" href="#15" data-n="15"><img src="assets/15-cat-bookstore-th.png" alt="Page 15 cat bookstore" loading="lazy" /><span>15</span></a><a class="card" href="#16" data-n="16"><img src="assets/16-skeleton-picnic-th.png" alt="Page 16 skeleton picnic" loading="lazy" /><span>16</span></a><a class="card" href="#17" data-n="17"><img src="assets/17-skeleton-dance-th.png" alt="Page 17 skeleton dance" loading="lazy" /><span>17</span></a><a class="card" href="#18" data-n="18"><img src="assets/18-skeleton-bowling-th.png" alt="Page 18 skeleton bowling" loading="lazy" /><span>18</span></a><a class="card" href="#19" data-n="19"><img src="assets/19-vampire-tea-th.png" alt="Page 19 vampire tea" loading="lazy" /><span>19</span></a><a class="card" href="#20" data-n="20"><img src="assets/20-vampire-romance-th.png" alt="Page 20 vampire romance" loading="lazy" /><span>20</span></a><a class="card" href="#21" data-n="21"><img src="assets/21-vampire-market-th.png" alt="Page 21 vampire market" loading="lazy" /><span>21</span></a><a class="card" href="#22" data-n="22"><img src="assets/22-werewolf-porch-th.png" alt="Page 22 werewolf porch" loading="lazy" /><span>22</span></a><a class="card" href="#23" data-n="23"><img src="assets/23-werewolf-salon-th.png" alt="Page 23 werewolf salon" loading="lazy" /><span>23</span></a><a class="card" href="#24" data-n="24"><img src="assets/24-werewolf-camp-th.png" alt="Page 24 werewolf camp" loading="lazy" /><span>24</span></a><a class="card" href="#25" data-n="25"><img src="assets/25-monster-nook-th.png" alt="Page 25 monster nook" loading="lazy" /><span>25</span></a><a class="card" href="#26" data-n="26"><img src="assets/26-monster-bake-th.png" alt="Page 26 monster bake" loading="lazy" /><span>26</span></a><a class="card" href="#27" data-n="27"><img src="assets/27-monster-laundry-th.png" alt="Page 27 monster laundry" loading="lazy" /><span>27</span></a><a class="card" href="#28" data-n="28"><img src="assets/28-spider-knit-th.png" alt="Page 28 spider knit" loading="lazy" /><span>28</span></a><a class="card" href="#29" data-n="29"><img src="assets/29-spider-umbrella-th.png" alt="Page 29 spider umbrella" loading="lazy" /><span>29</span></a><a class="card" href="#30" data-n="30"><img src="assets/30-spider-treehouse-th.png" alt="Page 30 spider treehouse" loading="lazy" /><span>30</span></a><a class="card" href="#31" data-n="31"><img src="assets/31-owl-branch-th.png" alt="Page 31 owl branch" loading="lazy" /><span>31</span></a><a class="card" href="#32" data-n="32"><img src="assets/32-owl-library-th.png" alt="Page 32 owl library" loading="lazy" /><span>32</span></a><a class="card" href="#33" data-n="33"><img src="assets/33-owl-observatory-th.png" alt="Page 33 owl observatory" loading="lazy" /><span>33</span></a><a class="card" href="#34" data-n="34"><img src="assets/34-crow-mail-th.png" alt="Page 34 crow mail" loading="lazy" /><span>34</span></a><a class="card" href="#35" data-n="35"><img src="assets/35-crow-fries-th.png" alt="Page 35 crow fries" loading="lazy" /><span>35</span></a><a class="card" href="#36" data-n="36"><img src="assets/36-crow-train-th.png" alt="Page 36 crow train" loading="lazy" /><span>36</span></a><a class="card" href="#37" data-n="37"><img src="assets/37-zombie-garden-th.png" alt="Page 37 zombie garden" loading="lazy" /><span>37</span></a><a class="card" href="#38" data-n="38"><img src="assets/38-zombie-grocery-th.png" alt="Page 38 zombie grocery" loading="lazy" /><span>38</span></a><a class="card" href="#39" data-n="39"><img src="assets/39-zombie-drivein-th.png" alt="Page 39 zombie drivein" loading="lazy" /><span>39</span></a><a class="card" href="#40" data-n="40"><img src="assets/40-frank-flowers-th.png" alt="Page 40 frank flowers" loading="lazy" /><span>40</span></a><a class="card" href="#41" data-n="41"><img src="assets/41-frank-bike-th.png" alt="Page 41 frank bike" loading="lazy" /><span>41</span></a><a class="card" href="#42" data-n="42"><img src="assets/42-frank-pottery-th.png" alt="Page 42 frank pottery" loading="lazy" /><span>42</span></a><a class="card" href="#43" data-n="43"><img src="assets/43-mummy-cocoa-th.png" alt="Page 43 mummy cocoa" loading="lazy" /><span>43</span></a><a class="card" href="#44" data-n="44"><img src="assets/44-mummy-yoga-th.png" alt="Page 44 mummy yoga" loading="lazy" /><span>44</span></a><a class="card" href="#45" data-n="45"><img src="assets/45-mummy-beach-th.png" alt="Page 45 mummy beach" loading="lazy" /><span>45</span></a><a class="card" href="#46" data-n="46"><img src="assets/46-house-mug-th.png" alt="Page 46 house mug" loading="lazy" /><span>46</span></a><a class="card" href="#47" data-n="47"><img src="assets/47-house-bunks-th.png" alt="Page 47 house bunks" loading="lazy" /><span>47</span></a><a class="card" href="#48" data-n="48"><img src="assets/48-house-bbq-th.png" alt="Page 48 house bbq" loading="lazy" /><span>48</span></a><a class="card" href="#49" data-n="49"><img src="assets/49-candy-mouse-th.png" alt="Page 49 candy mouse" loading="lazy" /><span>49</span></a><a class="card" href="#50" data-n="50"><img src="assets/50-candy-tictactoe-th.png" alt="Page 50 candy tictactoe" loading="lazy" /><span>50</span></a><a class="card" href="#51" data-n="51"><img src="assets/51-candy-shop-th.png" alt="Page 51 candy shop" loading="lazy" /><span>51</span></a><a class="card" href="#52" data-n="52"><img src="assets/52-moon-knit-th.png" alt="Page 52 moon knit" loading="lazy" /><span>52</span></a><a class="card" href="#53" data-n="53"><img src="assets/53-moon-camp-th.png" alt="Page 53 moon camp" loading="lazy" /><span>53</span></a><a class="card" href="#54" data-n="54"><img src="assets/54-moon-diner-th.png" alt="Page 54 moon diner" loading="lazy" /><span>54</span></a><a class="card" href="#55" data-n="55"><img src="assets/55-scarecrow-lemonade-th.png" alt="Page 55 scarecrow lemonade" loading="lazy" /><span>55</span></a><a class="card" href="#56" data-n="56"><img src="assets/56-scarecrow-maze-th.png" alt="Page 56 scarecrow maze" loading="lazy" /><span>56</span></a><a class="card" href="#57" data-n="57"><img src="assets/57-scarecrow-swing-th.png" alt="Page 57 scarecrow swing" loading="lazy" /><span>57</span></a><a class="card" href="#58" data-n="58"><img src="assets/58-mice-bakery-th.png" alt="Page 58 mice bakery" loading="lazy" /><span>58</span></a><a class="card" href="#59" data-n="59"><img src="assets/59-mice-subway-th.png" alt="Page 59 mice subway" loading="lazy" /><span>59</span></a><a class="card" href="#60" data-n="60"><img src="assets/60-mice-attic-th.png" alt="Page 60 mice attic" loading="lazy" /><span>60</span></a>
+    </div>
+    <p class="note">60 B&amp;W interiors from print prep. Cover is the locked C3 review front (phone aspect).</p>
+  </div>
+  <div class="viewer" id="viewer" aria-modal="true">
+    <div class="vbar">
+      <div id="vlabel">01</div>
+      <button type="button" id="vclose">Close</button>
+    </div>
+    <div class="vstage"><img id="vimg" alt="" /></div>
+    <div class="vnav">
+      <button type="button" id="vprev">Prev</button>
+      <button type="button" id="vnext">Next</button>
+    </div>
+  </div>
+  <script>
+    const pages = [{"n": 1, "file": "01-ghost-sofa.png", "title": "ghost sofa"}, {"n": 2, "file": "02-ghost-bath.png", "title": "ghost bath"}, {"n": 3, "file": "03-ghost-fridge.png", "title": "ghost fridge"}, {"n": 4, "file": "04-pumpkin-carve.png", "title": "pumpkin carve"}, {"n": 5, "file": "05-pumpkin-wagon.png", "title": "pumpkin wagon"}, {"n": 6, "file": "06-pumpkin-fort.png", "title": "pumpkin fort"}, {"n": 7, "file": "07-bat-laundry.png", "title": "bat laundry"}, {"n": 8, "file": "08-bat-chimes.png", "title": "bat chimes"}, {"n": 9, "file": "09-bat-movie.png", "title": "bat movie"}, {"n": 10, "file": "10-witch-kitchen.png", "title": "witch kitchen"}, {"n": 11, "file": "11-witch-coffee.png", "title": "witch coffee"}, {"n": 12, "file": "12-witch-greenhouse.png", "title": "witch greenhouse"}, {"n": 13, "file": "13-cat-yarn.png", "title": "cat yarn"}, {"n": 14, "file": "14-cat-hat-boat.png", "title": "cat hat boat"}, {"n": 15, "file": "15-cat-bookstore.png", "title": "cat bookstore"}, {"n": 16, "file": "16-skeleton-picnic.png", "title": "skeleton picnic"}, {"n": 17, "file": "17-skeleton-dance.png", "title": "skeleton dance"}, {"n": 18, "file": "18-skeleton-bowling.png", "title": "skeleton bowling"}, {"n": 19, "file": "19-vampire-tea.png", "title": "vampire tea"}, {"n": 20, "file": "20-vampire-romance.png", "title": "vampire romance"}, {"n": 21, "file": "21-vampire-market.png", "title": "vampire market"}, {"n": 22, "file": "22-werewolf-porch.png", "title": "werewolf porch"}, {"n": 23, "file": "23-werewolf-salon.png", "title": "werewolf salon"}, {"n": 24, "file": "24-werewolf-camp.png", "title": "werewolf camp"}, {"n": 25, "file": "25-monster-nook.png", "title": "monster nook"}, {"n": 26, "file": "26-monster-bake.png", "title": "monster bake"}, {"n": 27, "file": "27-monster-laundry.png", "title": "monster laundry"}, {"n": 28, "file": "28-spider-knit.png", "title": "spider knit"}, {"n": 29, "file": "29-spider-umbrella.png", "title": "spider umbrella"}, {"n": 30, "file": "30-spider-treehouse.png", "title": "spider treehouse"}, {"n": 31, "file": "31-owl-branch.png", "title": "owl branch"}, {"n": 32, "file": "32-owl-library.png", "title": "owl library"}, {"n": 33, "file": "33-owl-observatory.png", "title": "owl observatory"}, {"n": 34, "file": "34-crow-mail.png", "title": "crow mail"}, {"n": 35, "file": "35-crow-fries.png", "title": "crow fries"}, {"n": 36, "file": "36-crow-train.png", "title": "crow train"}, {"n": 37, "file": "37-zombie-garden.png", "title": "zombie garden"}, {"n": 38, "file": "38-zombie-grocery.png", "title": "zombie grocery"}, {"n": 39, "file": "39-zombie-drivein.png", "title": "zombie drivein"}, {"n": 40, "file": "40-frank-flowers.png", "title": "frank flowers"}, {"n": 41, "file": "41-frank-bike.png", "title": "frank bike"}, {"n": 42, "file": "42-frank-pottery.png", "title": "frank pottery"}, {"n": 43, "file": "43-mummy-cocoa.png", "title": "mummy cocoa"}, {"n": 44, "file": "44-mummy-yoga.png", "title": "mummy yoga"}, {"n": 45, "file": "45-mummy-beach.png", "title": "mummy beach"}, {"n": 46, "file": "46-house-mug.png", "title": "house mug"}, {"n": 47, "file": "47-house-bunks.png", "title": "house bunks"}, {"n": 48, "file": "48-house-bbq.png", "title": "house bbq"}, {"n": 49, "file": "49-candy-mouse.png", "title": "candy mouse"}, {"n": 50, "file": "50-candy-tictactoe.png", "title": "candy tictactoe"}, {"n": 51, "file": "51-candy-shop.png", "title": "candy shop"}, {"n": 52, "file": "52-moon-knit.png", "title": "moon knit"}, {"n": 53, "file": "53-moon-camp.png", "title": "moon camp"}, {"n": 54, "file": "54-moon-diner.png", "title": "moon diner"}, {"n": 55, "file": "55-scarecrow-lemonade.png", "title": "scarecrow lemonade"}, {"n": 56, "file": "56-scarecrow-maze.png", "title": "scarecrow maze"}, {"n": 57, "file": "57-scarecrow-swing.png", "title": "scarecrow swing"}, {"n": 58, "file": "58-mice-bakery.png", "title": "mice bakery"}, {"n": 59, "file": "59-mice-subway.png", "title": "mice subway"}, {"n": 60, "file": "60-mice-attic.png", "title": "mice attic"}];
+    const cover = { n: 0, file: "cover.png", title: "Cover" };
+    const viewer = document.getElementById("viewer");
+    const vimg = document.getElementById("vimg");
+    const vlabel = document.getElementById("vlabel");
+    let i = 0;
+    function all() { return [cover].concat(pages); }
+    function show(idx) {
+      const list = all();
+      i = (idx + list.length) % list.length;
+      const p = list[i];
+      vimg.src = "assets/" + p.file;
+      vimg.alt = p.title;
+      vlabel.textContent = p.n === 0 ? "Cover" : String(p.n).padStart(2,"0") + " · " + p.title;
+      viewer.classList.add("on");
+      history.replaceState(null, "", p.n === 0 ? "#cover" : "#" + String(p.n).padStart(2,"0"));
+    }
+    document.getElementById("grid").addEventListener("click", (e) => {
+      const a = e.target.closest("a.card");
+      if (!a) return;
+      e.preventDefault();
+      show(parseInt(a.dataset.n, 10));
+    });
+    document.getElementById("cover-link").addEventListener("click", (e) => { e.preventDefault(); show(0); });
+    document.getElementById("vclose").onclick = () => { viewer.classList.remove("on"); history.replaceState(null,"",location.pathname); };
+    document.getElementById("vprev").onclick = () => show(i-1);
+    document.getElementById("vnext").onclick = () => show(i+1);
+    let x0 = null;
+    viewer.addEventListener("touchstart", (e) => { x0 = e.changedTouches[0].clientX; }, {passive:true});
+    viewer.addEventListener("touchend", (e) => {
+      if (x0 == null) return;
+      const dx = e.changedTouches[0].clientX - x0;
+      if (dx > 40) show(i-1);
+      if (dx < -40) show(i+1);
+      x0 = null;
+    });
+    document.addEventListener("keydown", (e) => {
+      if (!viewer.classList.contains("on")) return;
+      if (e.key === "ArrowRight") show(i+1);
+      if (e.key === "ArrowLeft") show(i-1);
+      if (e.key === "Escape") document.getElementById("vclose").click();
+    });
+    const hash = location.hash.replace("#","");
+    if (hash === "cover") show(0);
+    else if (/^\d+$/.test(hash)) show(parseInt(hash,10));
+  </script>
+</body>
+</html>
